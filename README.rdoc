@@ -1,5 +1,7 @@
 = Stripe Scala bindings
 
+== This fork for API version 2012-11-07
+
 == Quickstart with sbt 0.10
 In the +stripe-scala+ directory, run <tt>sbt console</tt>. You're now in a Scala REPL where you can import +com.stripe+. Set your +stripe.apiKey+ and start making API requests. (See the Example section at the end of this file)
 
