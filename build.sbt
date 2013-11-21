@@ -15,13 +15,13 @@ libraryDependencies ++= Seq(
 )
 
 
-publishTo <<= version { v: String =>
-  val nexus = "https://oss.sonatype.org/"
-  if (v.trim.endsWith("SNAPSHOT"))
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases" at nexus + "service/local/staging/deploy/maven2")
-}
+ // To publish to the Cloudbees repos:
+
+publishTo := Some("CB Repository" at "https://repository-idtp.forge.cloudbees.com/release/")
+ 
+credentials += Credentials( file("/private/idtp/cloudbees.credentials") )
+
+
 
 publishMavenStyle := true
 
